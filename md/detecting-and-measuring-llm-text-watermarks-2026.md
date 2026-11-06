@@ -212,6 +212,8 @@ The next empirical step is a KGW reference implementation and a multilingual ben
 
 # References
 
+Anthropic. (2026). How Claude marks AI-generated content. *Claude Help Center*. https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content
+
 Chen, R., et al. (2025). Improved unbiased watermark for large language models. *Proceedings of ACL 2025*, 20587–20601. https://doi.org/10.18653/v1/2025.acl-long.1005
 
 Christ, M., Gunn, S., & Zamir, O. (2024). Undetectable watermarks for language models. *Proceedings of COLT 2024*, 1125–1139. https://proceedings.mlr.press/v247/christ24a.html
