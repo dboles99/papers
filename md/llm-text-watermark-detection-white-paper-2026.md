@@ -144,7 +144,7 @@ DeepL remains important even without a documented hidden watermark. Academic stu
 
 Known detector plugins are not enough. The application should also scan for unexplained hidden characters, bidirectional controls, homoglyphs, abnormal Unicode normalization, whitespace channels, acrostics, periodic lexical choices, token schedules, hidden Word text, comments, revisions, fields, custom XML, external links, PDF overlays, and unusual metadata.
 
-These findings should be reported as deterministic hidden objects, container anomalies, statistical anomalies, reproduced covert channels, or unresolved patterns. None of these labels implies AI authorship.
+These findings should be reported as deterministic hidden objects, container anomalies, statistical anomalies, reproduced covert channels, or unresolved patterns. None of these labels implies AI authorship. A sanitized output must always be a new child artifact with an exact change log and before-and-after hashes.
 
 ## 7.3 Key management
 
@@ -221,7 +221,9 @@ The first release should remain a laboratory rather than a disciplinary tool. Th
 
 # References
 
-Chen, H., et al. (2025). Improved unbiased watermark for large language models. *Proceedings of ACL 2025*, 19631–19651. https://doi.org/10.18653/v1/2025.acl-long.1005
+Anthropic. (2026). How Claude marks AI-generated content. *Claude Help Center*. https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content
+
+Chen, R., et al. (2025). Improved unbiased watermark for large language models. *Proceedings of ACL 2025*, 20587–20601. https://doi.org/10.18653/v1/2025.acl-long.1005
 
 Christ, M., Gunn, S., & Zamir, O. (2024). Undetectable watermarks for language models. *Proceedings of COLT 2024*, 1125–1139. https://proceedings.mlr.press/v247/christ24a.html
 
@@ -233,11 +235,11 @@ He, Z., et al. (2024). Can watermarks survive translation? On the cross-lingual 
 
 Hu, Z., Chen, L., Wu, X., Wu, Y., Zhang, H., & Huang, H. (2024). Unbiased watermark for large language models. *International Conference on Learning Representations*. https://openreview.net/forum?id=uWVC5FVidc
 
-Jiang, Y., Kordi Boroujeny, M., Suresh Kumar, S., & Zeng, K. (2026). MirrorMark: A robust multi-bit watermark for large language models. *arXiv preprint arXiv:2601.22246v3*. https://arxiv.org/abs/2601.22246
+Jiang, Y., Kordi Boroujeny, M., Suresh Kumar, S., & Zeng, K. (2026). MirrorMark: Generalizable mirrored sampling for multi-bit LLM watermarking. *arXiv preprint arXiv:2601.22246v3*. https://arxiv.org/abs/2601.22246
 
 Kirchenbauer, J., Geiping, J., Wen, Y., Katz, J., Miers, I., & Goldstein, T. (2023). A watermark for large language models. *Proceedings of ICML 2023*, 17061–17084. https://proceedings.mlr.press/v202/kirchenbauer23a.html
 
-Kirchenbauer, J., Geiping, J., Wen, Y., Shu, M., Saifullah, K., Kong, K., Fernando, K., Saha, A., Goldblum, M., & Goldstein, T. (2024). On the reliability of watermarks for large language models. *International Conference on Learning Representations*. https://openreview.net/forum?id=aX8ig9X2a7
+Kirchenbauer, J., Geiping, J., Wen, Y., Shu, M., Saifullah, K., Kong, K., Fernando, K., Saha, A., Goldblum, M., & Goldstein, T. (2024). On the reliability of watermarks for large language models. *International Conference on Learning Representations*. https://openreview.net/forum?id=DEJIDCmWOz
 
 Krishna, K., Song, Y., Karpinska, M., Wieting, J., & Iyyer, M. (2023). Paraphrasing evades detectors of AI-generated text, but retrieval is an effective defense. *Advances in Neural Information Processing Systems, 36*. https://proceedings.neurips.cc/paper_files/paper/2023/hash/575c450013d0e99e4b0ecf82bd1afaa4-Abstract-Conference.html
 
@@ -245,9 +247,13 @@ Kuditipudi, R., Thickstun, J., Hashimoto, T., & Liang, P. (2024). Robust distort
 
 Liang, W., et al. (2023). GPT detectors are biased against non-native English writers. *Patterns, 4*(7), 100779. https://doi.org/10.1016/j.patter.2023.100779
 
-Pang, Q., et al. (2024). No free lunch in LLM watermarking: Trade-offs in watermarking design. *Advances in Neural Information Processing Systems, 37*. https://proceedings.neurips.cc/paper_files/paper/2024/hash/fa86a9c7b9f341716ccb679d1aeb9afa-Abstract-Conference.html
+Pang, Q., et al. (2024). No free lunch in LLM watermarking: Trade-offs in watermarking design choices. *Advances in Neural Information Processing Systems, 37*. https://proceedings.neurips.cc/paper_files/paper/2024/hash/fa86a9c7b9f341716ccb679d1aeb9afa-Abstract-Conference.html
 
-Wu, Y., & Chandrasekaran, V. (2024). Bypassing LLM watermarks with color-aware substitutions. *Proceedings of ACL 2024*, 8477–8490. https://doi.org/10.18653/v1/2024.acl-long.464
+Wu, Q., & Chandrasekaran, V. (2024). Bypassing LLM watermarks with color-aware substitutions. *Proceedings of ACL 2024*, 8549–8581. https://doi.org/10.18653/v1/2024.acl-long.464
+
+Zhang, H., et al. (2024). Watermarks in the sand: Impossibility of strong watermarking for language models. *Proceedings of ICML 2024*. https://openreview.net/forum?id=bM2s12t4hR
+
+Zhao, X., Ananth, P. V., Li, L., & Wang, Y.-X. (2024). Provable robust watermarking for AI-generated text. *International Conference on Learning Representations*. https://openreview.net/forum?id=SsmT8aO45L
 
 Zhao, X., et al. (2025). SoK: Watermarking for AI-generated content. *2025 IEEE Symposium on Security and Privacy*. https://doi.org/10.1109/SP61157.2025.00178
 

@@ -12,6 +12,8 @@ IMRAD evidence synthesis and implementation design
 
 Statistical text watermarking has emerged as a proposed mechanism for identifying and attributing large language model output. However, operational use is complicated by editing, paraphrasing, translation, mixed-source documents, spoofing, tokenizer dependence, secret-key management, and false-positive risk. This study synthesizes 20 foundational, evaluative, adversarial, and recent papers published or released between 2023 and August 2026 and translates that evidence into a security-oriented application design. The review separates keyed watermark verification from generic stylistic detection and distinguishes watermark presence from provider attribution and human authorship. The proposed system implements independent method adapters for KGW-style, MCmark-inspired, and MirrorMark-inspired watermarking; immutable run manifests; matched calibration; controlled attack simulation; a provider-neutral model ensemble; and a Docker-based mock provider. The evidence indicates that watermarking can provide useful provenance evidence under compatible and calibrated conditions, but no reviewed method simultaneously guarantees invisibility, quality, robustness, public verification, spoof resistance, and reliable payload recovery. Translation and strong paraphrasing remain particularly important threats. The paper concludes that watermark results should support a layered provenance review rather than automatic authorship judgments. It also proposes a dual-model paper-ingestion process in which Kimi 2.7 Code develops equation-to-code specifications and GLM 5.2 independently audits them before implementation.
 
+*Section 4.2 discusses mitigation only to set the limits of the proposed detection and testing design. The accompanying repository ships no tooling for removing watermarks.*
+
 **Keywords:** large language models; text watermarking; AI-generated text detection; provenance; adversarial NLP; cybersecurity; paraphrasing; translation; statistical forensics
 
 # 1. Introduction
@@ -210,7 +212,7 @@ The next empirical step is a KGW reference implementation and a multilingual ben
 
 # References
 
-Chen, H., et al. (2025). Improved unbiased watermark for large language models. *Proceedings of ACL 2025*, 19631–19651. https://doi.org/10.18653/v1/2025.acl-long.1005
+Chen, R., et al. (2025). Improved unbiased watermark for large language models. *Proceedings of ACL 2025*, 20587–20601. https://doi.org/10.18653/v1/2025.acl-long.1005
 
 Christ, M., Gunn, S., & Zamir, O. (2024). Undetectable watermarks for language models. *Proceedings of COLT 2024*, 1125–1139. https://proceedings.mlr.press/v247/christ24a.html
 
@@ -224,11 +226,11 @@ He, Z., et al. (2024). Can watermarks survive translation? On the cross-lingual 
 
 Hu, Z., Chen, L., Wu, X., Wu, Y., Zhang, H., & Huang, H. (2024). Unbiased watermark for large language models. *International Conference on Learning Representations*. https://openreview.net/forum?id=uWVC5FVidc
 
-Jiang, Y., Kordi Boroujeny, M., Suresh Kumar, S., & Zeng, K. (2026). MirrorMark: A robust multi-bit watermark for large language models. *arXiv preprint arXiv:2601.22246v3*. https://arxiv.org/abs/2601.22246
+Jiang, Y., Kordi Boroujeny, M., Suresh Kumar, S., & Zeng, K. (2026). MirrorMark: Generalizable mirrored sampling for multi-bit LLM watermarking. *arXiv preprint arXiv:2601.22246v3*. https://arxiv.org/abs/2601.22246
 
 Kirchenbauer, J., Geiping, J., Wen, Y., Katz, J., Miers, I., & Goldstein, T. (2023). A watermark for large language models. *Proceedings of ICML 2023*, 17061–17084. https://proceedings.mlr.press/v202/kirchenbauer23a.html
 
-Kirchenbauer, J., Geiping, J., Wen, Y., Shu, M., Saifullah, K., Kong, K., Fernando, K., Saha, A., Goldblum, M., & Goldstein, T. (2024). On the reliability of watermarks for large language models. *International Conference on Learning Representations*. https://openreview.net/forum?id=aX8ig9X2a7
+Kirchenbauer, J., Geiping, J., Wen, Y., Shu, M., Saifullah, K., Kong, K., Fernando, K., Saha, A., Goldblum, M., & Goldstein, T. (2024). On the reliability of watermarks for large language models. *International Conference on Learning Representations*. https://openreview.net/forum?id=DEJIDCmWOz
 
 Krishna, K., Song, Y., Karpinska, M., Wieting, J., & Iyyer, M. (2023). Paraphrasing evades detectors of AI-generated text, but retrieval is an effective defense. *Advances in Neural Information Processing Systems, 36*. https://proceedings.neurips.cc/paper_files/paper/2023/hash/575c450013d0e99e4b0ecf82bd1afaa4-Abstract-Conference.html
 
@@ -238,14 +240,14 @@ Liang, W., et al. (2023). GPT detectors are biased against non-native English wr
 
 Liu, A., et al. (2024). A survey of text watermarking in the era of large language models. *ACM Computing Surveys, 57*(2). https://doi.org/10.1145/3691626
 
-Pang, Q., et al. (2024). No free lunch in LLM watermarking: Trade-offs in watermarking design. *Advances in Neural Information Processing Systems, 37*. https://proceedings.neurips.cc/paper_files/paper/2024/hash/fa86a9c7b9f341716ccb679d1aeb9afa-Abstract-Conference.html
+Pang, Q., et al. (2024). No free lunch in LLM watermarking: Trade-offs in watermarking design choices. *Advances in Neural Information Processing Systems, 37*. https://proceedings.neurips.cc/paper_files/paper/2024/hash/fa86a9c7b9f341716ccb679d1aeb9afa-Abstract-Conference.html
 
 Piet, J., et al. (2025). Mark my words: Analyzing and evaluating language model watermarks. *IEEE Conference on Secure and Trustworthy Machine Learning*, 68–91. https://arxiv.org/abs/2312.00273
 
 Sadasivan, V. S., Kumar, A., Balasubramanian, S., Wang, W., & Feizi, S. (2023). Can AI-generated text be reliably detected? *arXiv preprint arXiv:2303.11156*. https://arxiv.org/abs/2303.11156
 
-Wu, Y., & Chandrasekaran, V. (2024). Bypassing LLM watermarks with color-aware substitutions. *Proceedings of ACL 2024*, 8477–8490. https://doi.org/10.18653/v1/2024.acl-long.464
+Wu, Q., & Chandrasekaran, V. (2024). Bypassing LLM watermarks with color-aware substitutions. *Proceedings of ACL 2024*, 8549–8581. https://doi.org/10.18653/v1/2024.acl-long.464
 
-Zhang, H., et al. (2024). Watermarks in the sand: Impossibility of strong watermarking for generative models. *Proceedings of ICML 2024*. https://openreview.net/forum?id=bM2s12t4hR
+Zhang, H., et al. (2024). Watermarks in the sand: Impossibility of strong watermarking for language models. *Proceedings of ICML 2024*. https://openreview.net/forum?id=bM2s12t4hR
 
 Zhao, X., et al. (2025). SoK: Watermarking for AI-generated content. *2025 IEEE Symposium on Security and Privacy*. https://doi.org/10.1109/SP61157.2025.00178

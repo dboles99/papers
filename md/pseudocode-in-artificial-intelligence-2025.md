@@ -55,7 +55,7 @@ Research Matrix
 
 # References
 
-*Note added on publication. The reference list below is reproduced as first written. A later audit (Boles, 2026, also in this repository) found that nine of these fourteen sources carried an incorrect identifier and that one, Overturning and Moving (2024), could not be located under any title, author, or identifier. Treat those entries, and any claim or quotation resting on them, as unverified. The corrected list is in the follow-up paper.*
+*Note added on publication. The reference list below is reproduced as first written. A later audit (Boles, 2026, also in this repository) found that nine of these fourteen sources carried an incorrect identifier and that one, Overturning and Moving (2024), could not be located. The corrected list is in the follow-up paper.*
 
 Bashir, S. (2025). Using pseudo-AI submissions for detecting AI-generated code. Frontiers in Computer Science, 7, 1549761. https://doi.org/10.3389/fcomp.2025.1549761
 
@@ -225,7 +225,7 @@ foreach (\$line in \$lines) {
 
 \$trim = \$line.Trim()
 
-if (\$trim -match '^FUNCTION\s+(\[A-Za-z0-9\_\]+)\\(.\*?)\\\s\*-\>\s\*(.\*)\$') {
+if (\$trim -match '^FUNCTION\s+(\[A-Za-z0-9\_\]+)\\((.\*?)\\)\s\*-\>\s\*(.\*)\$') {
 
 \$name = \$matches\[1\]
 
@@ -325,7 +325,7 @@ OK PseudoToPy Wrote .\example.py
 
 \$ python - \<\<'PY'
 
-import re,sys; s=open('example.py','r',encoding='utf-8').read(); print('FUNC OK:', bool(re.search(r"def\s+refine_text\s\*\\", s))) ; print('LINES :', len(s.splitlines()))
+import re,sys; s=open('example.py','r',encoding='utf-8').read(); print('FUNC OK:', bool(re.search(r"def\s+refine_text\s\*\\(", s))) ; print('LINES :', len(s.splitlines()))
 
 PY
 
@@ -411,7 +411,7 @@ code = line.rstrip()
 
 \# FUNCTION
 
-m = re.match(r'^FUNCTION\s+(\[A-Za-z0-9\_\]+)\\(.\*?)\\\s\*-\>\s\*(.\*)\$', code, re.I)
+m = re.match(r'^FUNCTION\s+(\[A-Za-z0-9\_\]+)\\((.\*?)\\)\s\*-\>\s\*(.\*)\$', code, re.I)
 
 if m:
 

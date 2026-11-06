@@ -1,5 +1,7 @@
 # Papers
 
+**[Read the wiki](https://github.com/dboles99/papers/wiki)** for a reading guide and how these papers were made.
+
 Papers by Daniel Boles on pseudocode as a specification language for AI work, and on detecting
 statistical watermarks in text from large language models. Each paper is here as PDF and Markdown.
 
