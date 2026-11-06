@@ -252,4 +252,6 @@ Wu, Q., & Chandrasekaran, V. (2024). Bypassing LLM watermarks with color-aware s
 
 Zhang, H., et al. (2024). Watermarks in the sand: Impossibility of strong watermarking for language models. *Proceedings of ICML 2024*. https://openreview.net/forum?id=bM2s12t4hR
 
+Zhao, X., Ananth, P. V., Li, L., & Wang, Y.-X. (2024). Provable robust watermarking for AI-generated text. *International Conference on Learning Representations*. https://openreview.net/forum?id=SsmT8aO45L
+
 Zhao, X., et al. (2025). SoK: Watermarking for AI-generated content. *2025 IEEE Symposium on Security and Privacy*. https://doi.org/10.1109/SP61157.2025.00178
